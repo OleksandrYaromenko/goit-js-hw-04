@@ -1,4 +1,4 @@
-function calcAverageCalories(days) {
+function calcAverageCalories(days) {    //// перщий варіант втрішення
     let sumCaloriesWeek = 0
     let numberCalories = 0;
     for (const sum of days) {
@@ -8,7 +8,7 @@ function calcAverageCalories(days) {
     return sumCaloriesWeek || 0
 }
 
-function calcAverageCalories1(days) {
+function calcAverageCalories1(days) {     /// другий варіант
     let sumCaloriesWeek = 0
     let numberCalories = 0;
     
