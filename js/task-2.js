@@ -3,9 +3,24 @@ function calcAverageCalories(days) {
     let numberCalories = 0;
     for (const sum of days) {
         numberCalories += sum.calories
-        sumCaloriesWeek = numberCalories / days.length
+    } 
+     sumCaloriesWeek = numberCalories / days.length
+    return sumCaloriesWeek || 0
+}
+
+function calcAverageCalories1(days) {
+    let sumCaloriesWeek = 0
+    let numberCalories = 0;
+    
+     if (days.length) {              // якщо довжина масива true
+        for (const sum of days) {
+            numberCalories += sum.calories
+         } 
+         sumCaloriesWeek = numberCalories / days.length
     }
-    return sumCaloriesWeek
+     else {
+         return sumCaloriesWeek // у випадку довжина масиву false повернеться 0
+     } 
 }
 
 
@@ -35,5 +50,8 @@ console.log(
 ); // 2270
 
 console.log(
-  calcAverageCalories([])
+  calcAverageCalories1([])
 ); // 0
+
+
+
